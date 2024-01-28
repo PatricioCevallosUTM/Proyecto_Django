@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Ventas de Dispositivos Tecnologicos. {% endblock %}</title>
+
+    <link rel="shortcut icon" href="{% static 'core/img/Logo.ico' %}">
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- Estilos -->
+    <link href="{% static 'core/css/normalize.css' %}" rel="stylesheet">
+    <link href="{% static 'core/css/estilos.css' %}" rel="stylesheet">
+
+
+</head>
+<body>
+    <header class="site-header inicio" style="background-image: url('{% static 'core/img/fondo.jpg' %}')"> 
+        <!--<img src="{% static 'core/img/fondo.jpg' %}"  alt="fondo">-->
+
+        <div class="Contenedor contenido-header">
+            <div class="Barra">
+                <a href="/">
+                    <img src="{% static 'core/img/Logo.png' %}" 
+                    width="250" 
+                    height="150" 
+                    alt="Logotipo">
+                
+                </a>
+                <nav class="navegacion">
+                    <a href="{% url 'nosotros' %}">Nosotros</a>
+                    <a href="{% url 'articulos' %}">Articulos</a>
+                    <a href="{% url 'contacto' %}">Contacto</a> 
+                </nav>
+            </div>
+
+            <h1> LA MEJOR TIENDA ONLINE DE DISPOSITIVOS TECNOLOGICOS EN ECUADOR </h1>
+        
+        </div>
+    </header>
+    
+    <section class="Contenedor seccion">
+        <h2 class="fw-300 centrar-texto">Más sobre Nosotros</h2>
+        <div class="iconos-nosotros">
+            <div class="icono">
+                <img src="{% static 'core/img/icono1.svg' %}" class="iconotamaño" alt="Icono Domicilio">
+                <h3>ENTREGA A DOMICILIO</h3>
+                <p>Envíos rápidos y confiables a todo el Ecuador.</p>
+            </div>
+            <div class="icono">
+                <img src="{% static 'core/img/icono2.svg' %}" class="iconotamaño" alt="Icono Precio">
+                <h3>EL MEJOR PRECIO</h3>
+                <p>Contamos con los mejores precios y las mejores ofertas del mercado.</p>
+            </div>
+            <div class="icono">
+                <img src="{% static 'core/img/icono3.svg' %}" class="iconotamaño" alt="Icono Premium">
+                <h3>PRODUCTOS PREMIUM</h3>
+                <p>Marcas reconocidas con calidad certificada.</p>
+                </div>
+        </div>
+    </section>
+
+    <main class="seccion Contenedor">
+        <h2 class="fw-300 centrar-texto">PRODUCTOS DESTACADOS</h2>
+
+        <div class="contenedor-productos">
+            <div class="producto">
+                <img src="{% static 'core/img/silla.jpg' %}" alt="silla">
+                <div class="contenido-producto">
+                    <h3>Silla Gamer Thronos 100T -Primus Gaming</h3>
+                    <p>Comodidad insuperable, ideal para largas jornadas de trabajo o torneos intenso.</p>
+                    <p class="precio">$304,99 con IVA</p>
+                    <a href="#" class="boton boton-verde d-block">Ver Producto</a>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="{% static 'core/img/ventilador.jpg' %}" alt="ventilador">
+                <div class="contenido-producto">
+                    <h3>Ventilador premium para computadora portátil 16″</h3>
+                    <p>Ventilador super silencioso que evita el sobrecalentamiento.
+                    Alimentado por USB, para cualquier puerto</p>
+                    <p class="precio">$28,95 con IVA</p>
+                    <a href="#" class="boton boton-verde d-block">Ver Producto</a>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="{% static 'core/img/audifonos.jpg' %}" alt="audifonos">
+                <div class="contenido-producto">
+                    <h3>Audífonos inalámbricos - Palladium</h3>
+                    <p>Diseño liviano y adaptable, 
+                    Sonido natural y muy nítido desde distintas fuentes de audio.</p>
+                    <p class="precio">$27,50 con IVA</p>
+                    <a href="#" class="boton boton-verde d-block">Ver Producto</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="ver-todas">
+            <a href="{% url 'articulos' %}" class="boton boton-azul">Ver Todos los Producto</a>
+        </div>
+
+    </main>
+
+    <section class="imagen-contacto" style= "background-image: url('{% static 'core/img/fondo2.jpg' %}')">
+        <div class="Contenedor contenido-contacto">
+            <h2>Tenemos lo que necesitas!</h2>
+            <p>Llena el formulario de contacto y un asesor se pondra en contacto contigo.</p>
+            <a href="{% url 'contacto' %}" class="boton boton-verde">Contactanos</a>
+        </div>
+    </section>
+
+    <footer class="site-footer seccion">
+        <div class="Contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="{% url 'nosotros' %}">Nosotros</a>
+                <a href="{% url 'articulos' %}">Articulos</a>
+                <a href="{% url 'contacto' %}">Contacto</a> 
+             </nav>
+            <p class="copi">Todos los Derechos Reservados 2024 &copy;</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Articulos {% endblock %}</title>
+
+    <link rel="shortcut icon" href="{% static 'core/img/Logo.ico' %}">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- Estilos -->
+    <link href="{% static 'core/css/normalize.css' %}" rel="stylesheet">
+    <link href="{% static 'core/css/estilos.css' %}" rel="stylesheet">
+
+</head>
+<body style= "background-image: url('{% static 'core/img/fondo_ar.jpg' %}')">
+
+    <div class="BARRA">
+        <a href="/">
+            <img src="{% static 'core/img/Logo.png' %}" 
+            width="200" 
+            height="100" 
+            alt="Logotipo">
+        
+        </a>
+        <nav class="NAVEGACION_ar">
+            <a href="{% url 'nosotros' %}">Nosotros</a>
+            <a href="{% url 'articulos' %}">Articulos</a>
+            <a href="{% url 'contacto' %}">Contacto</a> 
+        </nav>
+    </div>
+
+    <div class="ofertas"> <h3>Ofertas</h3></div>   
+    <div class="seccion-articulos Contenedor">
+        
+            <div class="slider-frame">
+                <ul>
+                    <li><img src="{% static 'core/img/SLIDER_silla.jpg' %}" alt="S_silla"></li>
+                    <li><img src="{% static 'core/img/SLIDER_rizen.jpg' %}" alt="S_ryzen"></li>
+                    <li><img src="{% static 'core/img/SLIDER_audifonos.jpg' %}" alt="S_audifonos"></li>
+                    <li><img src="{% static 'core/img/SLIDER_laptop.jpg' %}" alt="S_laptop"></li>
+
+                </ul>
+            </div>
+        
+    </div>
+
+    <section>
+        <div class="ofertas"> <h3>Catalogo de Productos</h3></div>
+        <main class="seccion Contenedor">
+    
+            <div class="contenedor-productos">
+                <div class="producto">
+                    <img src="{% static 'core/img/silla.jpg' %}" alt="silla">
+                    <div class="contenido-producto">
+                        <h3>Silla Gamer Thronos 100T -Primus Gaming</h3>
+                        <p>Comodidad insuperable, ideal para largas jornadas de trabajo o torneos intenso.</p>
+                        <p class="precio">$304,99 con IVA</p>
+                        <a href="#" class="boton boton-verde d-block">Ver Producto</a>
+                    </div>
+                </div>
+                <div class="producto">
+                    <img src="{% static 'core/img/ventilador.jpg' %}" alt="ventilador">
+                    <div class="contenido-producto">
+                        <h3>Ventilador premium para computadora portátil 16″</h3>
+                        <p>Ventilador super silencioso que evita el sobrecalentamiento.
+                        Alimentado por USB, para cualquier puerto</p>
+                        <p class="precio">$28,95 con IVA</p>
+                        <a href="#" class="boton boton-verde d-block">Ver Producto</a>
+                    </div>
+                </div>
+                <div class="producto">
+                    <img src="{% static 'core/img/audifonos.jpg' %}" alt="audifonos">
+                    <div class="contenido-producto">
+                        <h3>Audífonos inalámbricos - Palladium</h3>
+                        <p>Diseño liviano y adaptable, 
+                        Sonido natural y muy nítido desde distintas fuentes de audio.</p>
+                        <p class="precio">$27,50 con IVA</p>
+                        <a href="#" class="boton boton-verde d-block">Ver Producto</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="ver-todas">
+                <a href="#" class="boton boton-azul">Ver Todos los Producto</a>
+            </div>
+    
+        </main>
+
+    </section>
+
+
+
+    <footer class="site-footer seccion">
+        <div class="Contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="{% url 'nosotros' %}">Nosotros</a>
+                <a href="{% url 'articulos' %}">Articulos</a>
+                <a href="{% url 'contacto' %}">Contacto</a> 
+             </nav>
+            <p class="copi">Todos los Derechos Reservados 2024 &copy;</p>
+        </div>
+    </footer>
+</body>
+</html>
